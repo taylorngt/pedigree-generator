@@ -304,14 +304,3 @@ def pedigree_generator(max_children, FamilyID, mode, generation_count, SpouseLik
 
         return family_df
 
-#Testing new pedigree generator
-test_df = pedigree_generator(max_children= 3,
-                             FamilyID= 'FAM1',
-                             mode= 'AD',
-                             generation_count= 3,
-                             AffectedSpouse= True,
-                             alt_freq= 0.1,
-                             BackpropLikelihood= 0.5)
-print(test_df)
-test_dg = construct_pedigree_graph(test_df)
-plot_pedigree_tree(test_dg, "Affected Spouse AD Pedigree")

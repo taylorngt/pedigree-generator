@@ -65,9 +65,19 @@ generated_df = pedigree_generator(max_children= max_children,
 
 generated_dg = construct_pedigree_graph(generated_df)
 st.write(plot_pedigree_tree(generated_dg, f'{FamilyID} Pedigree' if FamilyID else 'Randomly Generated Pedigree'))
-st.dataframe(generated_df)
+st.dataframe(
+    generated_df,
+    hide_index= True,
+    column_order= ['FamilyID', 'IndividualID', 'PaternalID', 'MaternalID', 'Sex', 'Phenotype'],
+    column_config= {
+        'FamilyID': 'Family ID', 
+        'IndividualID': 'ID', 
+        'PaternalID': 'Paternal ID', 
+        'MaternalID': 'Paternal ID',
+    }
+)
 
-pedfile = generated_df.to_csv(columns= ['FamilyID', 'PaternalID', 'MaternalID', 'Sex', 'Phenotype'],
+pedfile = generated_df.to_csv(columns= ['FamilyID', 'IndividualID', 'PaternalID', 'MaternalID', 'Sex', 'Phenotype'],
                               header= False,
                               index= False,
                               sep= ' ')
