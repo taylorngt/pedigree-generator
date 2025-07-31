@@ -8,7 +8,7 @@ st.title('Pedigree Generator')
 st.text_input("Family ID", key='FamilyID')
 max_children = st.slider(label= 'Max Children',
                          min_value= 0,
-                         max_value= 25,
+                         max_value= 10,
                          value= 3,
                          help= 'The maximum number of children each spousal pair can have')
 
@@ -20,7 +20,7 @@ mode = st.selectbox(label= 'Mode of Inheritance',
 
 generation_count = st.slider(label= 'Number of Generations',
                              min_value= 0,
-                             max_value= 20,
+                             max_value= 10,
                              value= 3)
 AffectedSpouse = st.checkbox(label = 'Affected Secondary Founders',
                              help= 'Write up later')
