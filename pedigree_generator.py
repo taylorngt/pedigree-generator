@@ -2,8 +2,6 @@ import random
 import pandas as pd
 import matplotlib.pyplot as plt
 import networkx as nx
-import argparse
-import papermill
 from networkx.drawing.nx_agraph import graphviz_layout 
 
 def construct_pedigree_graph(df):

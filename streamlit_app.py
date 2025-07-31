@@ -1,5 +1,4 @@
 import streamlit as st
-import papermill
 from pedigree_generator import pedigree_generator, construct_pedigree_graph, plot_pedigree_tree
 
 st.title('Pedigree Generator')
