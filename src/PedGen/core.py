@@ -27,7 +27,8 @@ def construct_pedigree_graph(df):
 
     return G
 
-def plot_pedigree_tree(G, title="Pedigree (Tree Layout)"):
+def plot_pedigree_tree(df, title="Pedigree (Tree Layout)"):
+    G = construct_pedigree_graph(df)
     fig_size = (10, 5)
     f = plt.figure(figsize=fig_size)
 
@@ -53,6 +54,7 @@ def plot_pedigree_tree(G, title="Pedigree (Tree Layout)"):
 
     plt.title(title)
     plt.axis('off')
+    plt.show()
 
     return f
 
@@ -302,3 +304,10 @@ def pedigree_generator(max_children, FamilyID, mode, generation_count, SpouseLik
 
         return family_df
 
+def gen_PED_export(ped_df, output_dir='.'):
+    pedfile = ped_df.to_csv(f'{output_dir}/{ped_df.iloc["FamilyID"][0]}.ped',
+                            columns= ['FamilyID', 'IndividualID', 'PaternalID', 'MaternalID', 'Sex', 'Phenotype'],
+                            header= False,
+                            index= False,
+                            sep= '\t',
+                            )

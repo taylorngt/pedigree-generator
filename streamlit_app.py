@@ -62,8 +62,7 @@ generated_df = pedigree_generator(max_children= max_children,
                              BackpropLikelihood= BackpropLikelihood,
                              SpouseLikelihood= SpouseLikelihood)
 
-generated_dg = construct_pedigree_graph(generated_df)
-st.write(plot_pedigree_tree(generated_dg, f'{FamilyID} Pedigree' if FamilyID else 'Randomly Generated Pedigree'))
+st.write(plot_pedigree_tree(generated_df, f'{FamilyID} Pedigree' if FamilyID else 'Randomly Generated Pedigree'))
 st.dataframe(
     generated_df,
     hide_index= True,
