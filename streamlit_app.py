@@ -1,5 +1,5 @@
 import streamlit as st
-from pedigree_generator import pedigree_generator, construct_pedigree_graph, plot_pedigree_tree
+from PedGen import pedigree_generator, construct_pedigree_graph, plot_pedigree_tree
 
 st.title('Pedigree Generator')
 

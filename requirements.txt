@@ -1,5 +1,2 @@
+PedGen
 streamlit
-pandas
-matplotlib
-networkx
-pygraphviz
