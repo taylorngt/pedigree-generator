@@ -2,6 +2,8 @@
 
 PedGen is a python package that can be used to generate genetically realistic pedigrees. Generated pedigrees can be visualized as directed acyclic graphs and exported in PED file format.
 
+Pedigree generation and PED file export functionality additionally available via [Streamlit webapp](pedigree-generatorgit-kzmzvjzpxmt9yyvnryeq7h.streamlit.app).
+
 ## Prerequisites
 
 Some functionality included in PedGen relies on system-level dependencies, namely in instalation of Graphviz. Please ensure Graphviz is installed before using the pedigree visualization functionality:
