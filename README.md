@@ -30,11 +30,11 @@ The primary function included in this package, pedigree_generator, works to cont
 
 ### Pedigree Generation:
 
-**'pedigree_generator(FamilyID, max_children, mode, generation_count, SpouseLikelihood = 0.6, AffectedSpouse = True, BackpropLikelihood = 0.25, alt_freq = 0.1)'** - returns a dataframe with familial relation, sex, and phenotype information for individuals in the generated pedigree.
+**'pedigree_generator(max_children, FamilyID, mode, generation_count, SpouseLikelihood = 0.6, AffectedSpouse = True, BackpropLikelihood = 0.25, alt_freq = 0.1)'** - returns a dataframe with familial relation, sex, and phenotype information for individuals in the generated pedigree.
 
 #### **Parameters**
-- **FamilyID**(string): the ID name to be attached to the generated family pedigree
 - **max_children**(int): the maximum number of children that should be generated for any reproductive pair within the pedigree
+- **FamilyID**(string): the ID name to be attached to the generated family pedigree
 - **mode**['AD','AR']: the mode of inheritence to be used in generating the pedigree based on mendelian inheritance patters (AR= Autosomal Recessive, AD= Austosmal Dominant)
 - **generation_count**(int): the number of generations to be represented in the generated pedigree
 - **SpouseLikelihood**(float[0-1]): the likelihood that a reproductive partner will be generated for any offspring entry made over the course of pedigree forward propigation (default: 0.6)
